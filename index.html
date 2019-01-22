@@ -1,0 +1,71 @@
+
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 90%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Escape</title>
+</head>
+<body>
+ <div class="container">
+	<h1/><h1> CODE </h1>
+
+	<form class="form" action="enigme2.html">
+	  <input type="hidden" name="redirect" value="/enigme2.html">
+	  <div class="form-row">
+		<div class="col-3">
+		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
+			placeholder="X" name="A">
+		</div>
+		<div class="col-3">
+		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
+			placeholder="X" name="B">
+		</div>
+		<div class="col-3">
+		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
+			placeholder="X" name="C">
+		</div>
+		<div class="col-3">
+		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
+			placeholder="X" name="D">
+		</div>
+	  </div>
+
+	  
+	  <div class="form-row">
+		<button type="submit" class="btn btn-primary mb-2" style="margin-top: 2em; padding: 0.5em 4em 0.5em 4em;" 
+			onclick="validateForm()">Valider</button>
+	  </div>
+
+	</form>
+
+	<script>
+	function validateForm() {
+	  var a = document.forms[0]["A"].value
+	  var b = document.forms[0]["B"].value
+	  var c = document.forms[0]["C"].value
+	  var d = document.forms[0]["D"].value
+	  var abcd = a+b+c+d
+	  
+	  if (abcd != "1597") {
+		event.preventDefault()
+	  }
+	  console.log("valid : " + a + b +c +d)
+	}
+	</script>
+ <div>
+</body>
+</html>
