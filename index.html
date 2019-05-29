@@ -26,21 +26,8 @@
 	<form class="form" action="enigme2.html">
 	  <input type="hidden" name="redirect" value="/enigme2.html">
 	  <div class="form-row">
-		<div class="col-3">
-		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
-			placeholder="X" name="A">
-		</div>
-		<div class="col-3">
-		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
-			placeholder="X" name="B">
-		</div>
-		<div class="col-3">
-		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
-			placeholder="X" name="C">
-		</div>
-		<div class="col-3">
-		  <input class="form-control form-control-lg" type="number" min="0" max="9" maxlength="1" onkeypress="if(this.value.length>=1) { return false;}" oninput="if(this.value.length>=1) { this.value = this.value.slice(0,1); }"
-			placeholder="X" name="D">
+		<div class="col-12">
+		  <input class="form-control form-control-lg" type="text" maxlength="15" placeholder="X" name="A">
 		</div>
 	  </div>
 
@@ -54,16 +41,12 @@
 
 	<script>
 	function validateForm() {
-	  var a = document.forms[0]["A"].value
-	  var b = document.forms[0]["B"].value
-	  var c = document.forms[0]["C"].value
-	  var d = document.forms[0]["D"].value
-	  var abcd = a+b+c+d
+	  var input = document.forms[0]["A"].value
 	  
-	  if (abcd != "1434") {
+	  if (input != "madrid") {
 		event.preventDefault()
 	  }
-	  console.log("valid : " + a + b +c +d)
+	  console.log("valid : " + a)
 	}
 	</script>
  <div>
