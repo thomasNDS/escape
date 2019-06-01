@@ -45,7 +45,7 @@
 	function validateForm() {
 	  var input = document.forms[0]["A"].value
 	  
-	  if (input !== atob("bWFkcmlk")||input !=="Madrid" ) {
+	  if (input !== atob("bWFkcmlk") && input !=="Madrid" ) {
 		event.preventDefault()
 	  }
 	  console.log("valid : " + input)
